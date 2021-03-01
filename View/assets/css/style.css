@@ -4,6 +4,8 @@ body{
 header{
 	display: flex;
 	flex-direction: row;
+	border-bottom: 1px solid gray;
+	margin-bottom: 50px;
 }
 .search{
 	position: relative;
