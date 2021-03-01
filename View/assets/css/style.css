@@ -1,0 +1,112 @@
+body{
+	align-items: center;
+}
+.container{
+}
+header{
+	
+	display: flex;
+	flex-direction: row;
+}
+.search{
+	position: relative;
+	align-items: center;
+	text-align: center;
+	padding: 26px 0;
+	display: flex;
+}
+header .icon{
+	position: absolute;
+	width: 20px;
+	height: 48px;
+	margin-left: 10px;
+}
+header .search input{
+	padding: 0 20px 0 38px;
+	height: 48px;
+	box-shadow: 0 9px 10px -4px rgb(201 214 239 / 46%);
+	background: #fff;
+	border-radius: 10px 0 0 10px;
+    width: 100%;
+    font-size: 16px;
+    color: #202842;
+    border: 1px solid gray;
+    border-right: none;
+}
+input:focus{
+    border-color:#CCC;
+    outline:0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+header .search-button{
+	height: 48px;
+	padding: 10px;
+	border-radius: 0 4px 4px 0;
+	box-shadow: 0 9px 10px -4px rgb(201 214 239 / 46%);
+	background-color: gray;
+	border: 1px solid gray;
+	border-left: none;
+	cursor: pointer;
+    font-family: Arial !important;
+    font-weight: 600;
+    color: white;
+}
+#nav{
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 257px;
+}
+#nav-login, #nav-basket{
+	height: 48px;
+	margin:26px 0;
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+}
+#nav-login .icon-user, #nav-basket .icon-basket{
+	float: left;
+	width: 22px;
+	height: 22px;
+	background-size: cover;
+}
+#nav-basket .icon-basket{
+	width: 19px;
+	height: 19px;
+}
+#nav-login .icon-user{
+	transition: background-image 0.3s;
+	background-image: url(../svg/icon-user.svg);
+}
+#nav-login:hover .icon-user{
+	background-image: url(../svg/icon-user-hover.svg);
+}
+#nav-basket .icon-basket{
+	transition: background-image 0.3s;
+	background-image: url(../svg/icon-basket.svg);
+}
+#nav-basket:hover .icon-basket{
+	background-image: url(../svg/icon-basket-hover.svg);
+}
+#nav-login p, #nav-basket p{
+	float: left;
+	margin: 0px;
+	font-size: 12px;
+	padding-left:5px;
+}
+#nav-login:hover p, #nav-basket:hover p{
+	color: #fc7f0a;
+}
+.basket-item-count{
+	/*display: none;*/
+	background-color: #f27a1a;
+    color: #fff;
+    font-family: oxygen, serif;
+    font-size: 11px;
+    width: 16px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: 2px;
+    border-radius: 50%;
+}
