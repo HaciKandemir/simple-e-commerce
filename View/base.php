@@ -38,6 +38,10 @@
         <div class="content">
             <?php include($page); ?>
         </div>
+        <footer class="footer">
+            <p>©2021 Hacı Kandemir Ltd. Şti.</p>
+            <a href="#">Kullanım Koşulları</a>
+        </footer>
     </div>
 </body>
 </html>

@@ -11,6 +11,6 @@
                 </p>
                 <a href="#" class="btn add-to-basket">Sepete Ekle</a>
             </div>
-        </div>                   
+        </div>
     </div>
 </div>
