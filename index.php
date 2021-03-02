@@ -6,6 +6,7 @@ if(isset($_GET['page'])&&$_GET['page']==="basket"){
 	$page="index.php";	
 }
 
+require ('vendor/autoload.php');
 include ('view/base.php');
 
 ?>
