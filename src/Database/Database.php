@@ -1,0 +1,43 @@
+<?php
+
+
+namespace App\Database;
+
+
+class Database
+{
+
+    public static $products = [
+        [
+            'id'=>1, 'name'=> 'Iphone XS Max', 'price'=>10999.10, 'currency'=>'TRY', 'category'=>'cellphone',
+            'image_url'=>"https://productimages.hepsiburada.net/s/21/280-413/9937404297266.jpg"
+        ],
+        [
+            'id'=>2, 'name'=>'Samsung Galaxy S20', 'price'=>7499, 'currency'=>'TRY', 'status'=>1, 'category'=>'cellphone',
+            'image_url'=>"https://cdn.dsmcdn.com/assets/product/media/images/20200217/11/3043578/63719450/1/1_org_zoom.jpg"
+        ],
+        [
+            'id'=>3, 'name'=>'Wiskas Cat Feed', 'price'=>240.5, 'currency'=>'TRY', 'category'=>'animalFood',
+            'sub_category'=>'cat',
+            'image_url'=>"https://www.whiskas.com/Content/images/products/large/meaty-selections.png"
+        ],
+        [
+            'id'=>4, 'name'=>'Size Health Nutrition Small Puppy Dog Food', 'price'=>324.77, 'currency'=>'TRY',
+            'category'=>'animalFood', 'sub_category'=>'dog',
+            'image_url'=>"https://images-na.ssl-images-amazon.com/images/I/71wNz2hgGVL._AC_SL1500_.jpg"
+        ]
+    ];
+
+    public static function find(int $id){
+        foreach (self::$products as $product){
+            if ($product['id']===$id){
+                return $product;
+            }
+        }
+        return null;
+    }
+
+    public function all(){
+        return self::$products;
+    }
+}

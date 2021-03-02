@@ -1,16 +1,18 @@
 <div class="row">
+    <?php foreach ($products as $product){?>
     <div class="col-sm-3 product-item">
         <div class="card product-item-block">
-            <img class="card-img-top" src="https://productimages.hepsiburada.net/s/21/280-413/9937404297266.jpg" alt="Card image cap">
+            <img class="card-img-top" src="<?=$product->getImageUrl()?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
-                    <span class="prdct-name">Iphone XS Max</span>
+                    <span class="prdct-name"><?=$product->getName()?></span>
                 </h5>
                 <p class="card-text">
-                    <span class="prdct-price">13.199 TL</span>
+                    <span class="prdct-price"><?=$product->getPrice().' '.$product->getCurrency() ?></span>
                 </p>
-                <a href="#" class="btn add-to-basket">Sepete Ekle</a>
+                <a id="<?=$product->getId()?>" class="btn add-to-basket">Sepete Ekle</a>
             </div>
         </div>
     </div>
+    <?php } ?>
 </div>

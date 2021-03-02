@@ -1,7 +1,10 @@
 {
 	"autoload": {
 		"psr-4": {
-			"App\\": "Product"
+			"App\\": "src/"
 		}
-	}
+	},
+  "require": {
+    "ext-json": "*"
+  }
 }

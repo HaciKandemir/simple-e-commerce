@@ -52,7 +52,7 @@ header .search-button{
 	border: 1px solid gray;
 	border-left: none;
 	cursor: pointer;
-    font-family: Arial !important;
+	font-family: Arial, serif !important;
     font-weight: 600;
     color: white;
 }
@@ -101,6 +101,9 @@ header .search-button{
 }
 #nav-login:hover p, #nav-basket:hover p{
 	color: #fc7f0a;
+}
+.basket-item-count:empty{
+	display: none;
 }
 .basket-item-count{
 	/*display: none;*/
