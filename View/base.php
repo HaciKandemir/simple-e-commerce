@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="View/assets/css/style.css?v=1">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -33,8 +34,10 @@
                     <div class="basket-item-count">1</div>
                 </div>
             </div>
-        </header>
-        <?php include($page); ?>
+        </header> 
+        <div class="content">
+            <?php include($page); ?>
+        </div>
     </div>
 </body>
 </html>
