@@ -16,10 +16,13 @@
 						<button class="button-counter up" id="<?=$product['id']?>">+</button>
 					</div>
 					<div class="basket-item-list-price">
-                        <p><span class="price">₺<?=number_format($product['price']*$product['count'], 2, ',', '.') ?></span>
+                        <p>
+                            <span class="price">
+                                ₺<?=number_format($product['price']*$product['count'], 2, ',', '.') ?>
+                            </span>
                         </p>
                     </div>
-					<a style="display: flex;" href="#">
+					<a class="delete-to-basket" id="<?=$product['id']?>" href="#">
 						<span class="icon-delete"></span>
 					</a>
 				</div>

@@ -22,7 +22,7 @@ Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
 - <s>Sepete ekle butonuna basıldığında ürün sepete eklenmeli.</s>
 - <s>Sepet içeriği SESSION içerisinde yer almalı</s>
 - <s>Sepet içeriği güncellenebilmeli ( sepetteki ürün adet miktarı )</s>
-- Sepet içeriğinden istenilen ürün kaldırılabilmeli
+- <s>Sepet içeriğinden istenilen ürün kaldırılabilmeli</s>
 - <s>Sepette kaç ürün olduğu header'da yer alacak sepet ikonu yanında rakamsal olarak gösterilmeli</s>
 - Sepet listesinde ürün ismi, fiyatı, para birimi, kaç adet eklendiği yer almalı.
 - Arayüz yayına çıkabilir bir ürün seviyesinde olmalı.

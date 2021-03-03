@@ -44,7 +44,7 @@ $(document).ready(function() {
                     $(".basket-item-count").text(data['basket_count']);
                     // adet ile çöp kutusu arasındaki fiyat
                     $('.price', $(this).parent().parent())[0].innerText=data['this_total_price']
-                        .toLocaleString('tr-TR', { style: 'currency', currency: data['currency'] });
+                        .toLocaleString('tr-TR', { style: 'currency', currency: "TRY" });
                     if (action==="up"){
                         $(this).prev('.input-counter')[0].stepUp(1)
                     }else{
@@ -56,4 +56,28 @@ $(document).ready(function() {
                 console.log("err:"+err);
             })
     });
+
+    //Sepetten silme
+    $('.delete-to-basket').click(function () {
+        productId = $(this).attr("id");
+        const formData = new FormData();
+        formData.append('id', productId);
+        formData.append('action',"delete");
+        fetch('../../basket.php',{
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log($(this).parent().parent().remove());
+                if (data['basket_count']===0){
+                    data['basket_count']=null;
+                }
+                $(".basket-item-count").text(data['basket_count']);
+            })
+            .catch(err=>{
+                console.log("err:"+err);
+            })
+    });
+
 });
