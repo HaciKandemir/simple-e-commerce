@@ -2,6 +2,8 @@
 session_start();
 //session_destroy();
 require ('vendor/autoload.php');
+new \App\Database\Database("src/Database/database.json");
+
 if (isset($_POST['id']) && isset($_POST['action'])){
     $id = $_POST['id'];
     $action = $_POST['action'];
@@ -16,14 +18,14 @@ if (isset($_POST['id']) && isset($_POST['action'])){
             echo json_encode(['success'=>true, 'basket_count'=>$_SESSION['total_basket_count']]);
         }
     }
-} else if (isset($_POST['id'])){
+}else if (isset($_POST['id'])){
     $id = $_POST['id'];
     if (isset($_SESSION['basket'][$id])){
         $_SESSION['basket'][$id]['count']+=1;
         $_SESSION['total_basket_count'] +=1;
     }else{
-        $prdct=\App\Database\Database::find($id);
-        if (!is_null($prdct)){
+        $prdct=\App\Database\Database::find($id,"products");
+        if (isset($prdct)){
             $_SESSION['basket'][$id] = [
                 "id"=>$prdct['id'],
                 "name"=>$prdct['name'],

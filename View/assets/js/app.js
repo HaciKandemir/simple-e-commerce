@@ -11,6 +11,7 @@ $(document).ready(function() {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 if (data['basket_count']>0){
                  $(".basket-item-count").text(data['basket_count']);
                 }
@@ -51,7 +52,4 @@ $(document).ready(function() {
                 console.log("err:"+err);
             })
     });
-
-
-
 });

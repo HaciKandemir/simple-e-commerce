@@ -34,7 +34,7 @@
                     <a href="?page=basket">
                         <span class="icon-basket"></span>
                         <p>Sepetim</p>
-                        <div class="basket-item-count"><?=$basketProductCount?></div>
+                        <div class="basket-item-count"><?=$_SESSION['total_basket_count']?:""?></div>
                     </a>
                 </div>
             </div>

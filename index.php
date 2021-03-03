@@ -1,21 +1,19 @@
 <?php
 session_start();
 require ('vendor/autoload.php');
+new \App\Database\Database("src/Database/database.json");
+$rawProducts = \App\Database\Database::all("products");
+$products = null;
 
 if(isset($_GET['page'])&&$_GET['page']==="basket"){
 	$page="basket.php";
 }else{
 	$page="index.php";	
 }
-
 if (!isset($_SESSION['total_basket_count'])){
     $_SESSION['total_basket_count'] = 0;
 }
 
-$db = new \App\Database\Database();
-$rawProducts = $db->all();
-$products = null;
-$basketProductCount = null;
 foreach ($rawProducts as $rawPrdct){
     if ($rawPrdct['category']==="cellphone"){
         $products[] = new \App\Entity\CellPhone($rawPrdct);
@@ -27,10 +25,6 @@ foreach ($rawProducts as $rawPrdct){
         }
     }
 }
-if ($_SESSION['total_basket_count']>0){
-    $basketProductCount = $_SESSION['total_basket_count'];
-}
 
 include ('view/base.php');
-
 ?>

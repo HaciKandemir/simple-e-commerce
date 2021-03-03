@@ -17,7 +17,7 @@ PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara gör
 
 ## Uygulama Özellikleri
 Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
-- Ürünler bir json dosyasında saklanmalı
+- <s>Ürünler bir json dosyasında saklanmalı</s>
 - <s>Ürünler anasayfada listelenmeli ve ürün adı, fiyat bilgisi, para birimi bilgisi, sepete ekle butonu gösterilmeli</s>
 - <s>Sepete ekle butonuna basıldığında ürün sepete eklenmeli.</s>
 - <s>Sepet içeriği SESSION içerisinde yer almalı</s>
