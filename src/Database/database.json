@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id":1, "name":"Iphone XS Max", "price":10999.10, "currency":"TR", "category":"cellphone",
+      "id":1, "name":"Iphone XS Max", "price":10999.10, "currency":"TRY", "category":"cellphone",
       "image_url":"https://productimages.hepsiburada.net/s/21/280-413/9937404297266.jpg"
     },
     {

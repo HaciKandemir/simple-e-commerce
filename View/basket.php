@@ -15,7 +15,10 @@
 						<input class="input-counter" min="1" value="<?=$product['count']?>" type="number" readonly>
 						<button class="button-counter up" id="<?=$product['id']?>">+</button>
 					</div>
-					<div class="basket-item-list-price"><?=$product['price'].' '.$product['currency'] ?></div>
+					<div class="basket-item-list-price">
+                        <p><span class="price">₺<?=number_format($product['price']*$product['count'], 2, ',', '.') ?></span>
+                        </p>
+                    </div>
 					<a style="display: flex;" href="#">
 						<span class="icon-delete"></span>
 					</a>

@@ -8,7 +8,9 @@
                     <span class="prdct-name"><?=$product->getName()?></span>
                 </h5>
                 <p class="card-text">
-                    <span class="prdct-price"><?=$product->getPrice().' '.$product->getCurrency() ?></span>
+                    <span class="prdct-price">
+                        ₺<?=number_format($product->getPrice(), 2, ',', '.')?>
+                    </span>
                 </p>
                 <a id="<?=$product->getId()?>" class="btn add-to-basket">Sepete Ekle</a>
             </div>

@@ -40,7 +40,11 @@ $(document).ready(function() {
             .then(response => response.json())
             .then(data => {
                 if (data['success']===true){
+                    // headerdaki ürün adeti
                     $(".basket-item-count").text(data['basket_count']);
+                    // adet ile çöp kutusu arasındaki fiyat
+                    $('.price', $(this).parent().parent())[0].innerText=data['this_total_price']
+                        .toLocaleString('tr-TR', { style: 'currency', currency: data['currency'] });
                     if (action==="up"){
                         $(this).prev('.input-counter')[0].stepUp(1)
                     }else{
