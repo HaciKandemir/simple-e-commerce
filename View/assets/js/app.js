@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    totalSumPrice();
 
     //Sepete ekleme
     $('.add-to-basket').click(function() {
@@ -50,6 +51,7 @@ $(document).ready(function() {
                     }else{
                        $(this).next('.input-counter')[0].stepDown(1);
                     }
+                    totalSumPrice();
                 }
             })
             .catch(err=>{
@@ -74,10 +76,19 @@ $(document).ready(function() {
                     data['basket_count']=null;
                 }
                 $(".basket-item-count").text(data['basket_count']);
+                totalSumPrice();
             })
             .catch(err=>{
                 console.log("err:"+err);
             })
     });
 
+    function totalSumPrice() {
+        sum = 0;
+        $('.price').each(function() {
+            sum += Number($(this).text().replace('.', '' ).replace(',','.').match(/\d.+/));
+        });
+        $('.basket-sum-price, .basket-total-price')
+            .text(sum.toLocaleString('tr-TR', { style: 'currency', currency: "TRY" }));
+    }
 });

@@ -8,7 +8,7 @@ PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara gör
 
 ## Gereksinimler
 - <s>Arayüz için bootstrap kullanılacak.</s>
-- Proje native php kullanılarak yazılmalı, herhangi hazır bir framework yada kütüphane kullanılmamalı
+- <s>Proje native php kullanılarak yazılmalı, herhangi hazır bir framework yada kütüphane kullanılmamalı</s>
 - Object oriented programlama yaklaşımı ile yapılmalı
 - <s>Namespace kullanımına dikkat edilmeli.</s>
 - <s>Autoloader yapısı kurulmalı. ( composer tercih edilebilir )</s>
@@ -24,6 +24,6 @@ Yazılacak sepet uygulamasında aşağıdaki özellikler olmalı;
 - <s>Sepet içeriği güncellenebilmeli ( sepetteki ürün adet miktarı )</s>
 - <s>Sepet içeriğinden istenilen ürün kaldırılabilmeli</s>
 - <s>Sepette kaç ürün olduğu header'da yer alacak sepet ikonu yanında rakamsal olarak gösterilmeli</s>
-- Sepet listesinde ürün ismi, fiyatı, para birimi, kaç adet eklendiği yer almalı.
+- <s>Sepet listesinde ürün ismi, fiyatı, para birimi, kaç adet eklendiği yer almalı.</s>
 - Arayüz yayına çıkabilir bir ürün seviyesinde olmalı.
 
