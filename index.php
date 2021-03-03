@@ -1,12 +1,15 @@
 <?php
 session_start();
-session_destroy();
 require ('vendor/autoload.php');
 
 if(isset($_GET['page'])&&$_GET['page']==="basket"){
 	$page="basket.php";
 }else{
 	$page="index.php";	
+}
+
+if (!isset($_SESSION['total_basket_count'])){
+    $_SESSION['total_basket_count'] = 0;
 }
 
 $db = new \App\Database\Database();
@@ -24,8 +27,8 @@ foreach ($rawProducts as $rawPrdct){
         }
     }
 }
-if (isset($_SESSION['basket'])&&count($_SESSION['basket'])>0){
-    $basketProductCount = count($_SESSION['basket']);
+if ($_SESSION['total_basket_count']>0){
+    $basketProductCount = $_SESSION['total_basket_count'];
 }
 
 include ('view/base.php');

@@ -75,6 +75,10 @@ header .search-button{
 	height: 22px;
 	background-size: cover;
 }
+#nav-basket > a{
+	display: flex;
+	color: #212529;
+}
 #nav-basket .icon-basket{
 	width: 19px;
 	height: 19px;

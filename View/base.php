@@ -31,9 +31,11 @@
                     <p>Giriş Yap</p>
                 </div>
                 <div id="nav-basket">
-                    <span class="icon-basket"></span>
-                    <p>Sepetim</p>
-                    <div class="basket-item-count"><?=$basketProductCount?></div>
+                    <a href="?page=basket">
+                        <span class="icon-basket"></span>
+                        <p>Sepetim</p>
+                        <div class="basket-item-count"><?=$basketProductCount?></div>
+                    </a>
                 </div>
             </div>
         </header> 
