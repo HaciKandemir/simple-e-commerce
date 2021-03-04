@@ -26,5 +26,5 @@ foreach ($rawProducts as $rawPrdct){
     }
 }
 
-include ('view/base.php');
+include ('View/base.php');
 ?>
