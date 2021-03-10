@@ -1,4 +1,3 @@
-Ödev süresi dahilinde yaptığım projenin deploy edilmiş hali: https://coremyecommerce.herokuapp.com/   (deploya hazır hale getirme işlevi ödev süresi bittikten sonra ekstra olarak yapıldı)
 # PHP OOP Sepet Ödevi
 
 PHP ile object oriented programlama pratiği amacıyla aşağıda kurallara göre belirtilen ödev yapılacaktır. 
