@@ -40,7 +40,7 @@
             </div>
         </header> 
         <div class="content">
-            <?php include($page); ?>
+            <?php include("View/".$page); ?>
         </div>
         <footer class="footer">
             <p>©2021 Hacı Kandemir Ltd. Şti.</p>
