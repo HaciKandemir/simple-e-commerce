@@ -3,11 +3,5 @@
 		"psr-4": {
 			"App\\": "src/"
 		}
-	},
-  	"require": {
-    	"ext-json": "*"
-  	},
-  	"require-dev": {
-    	"heroku/heroku-buildpack-php": "*"
-  	}
+	}
 }
